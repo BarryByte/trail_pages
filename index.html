@@ -1,26 +1,80 @@
-let postbtn = document.querySelector('.post');
-let textArea = document.getElementById('newpost');
-let feedArea = document.getElementById('feedArea');
-let feed = document.querySelector('.feed');
-postbtn.addEventListener('click', function () {
-    console.log("postbtn has been clicked");
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Scaler-Social</title>
+    <link
+      rel="stylesheet"
+      href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/064/033/original/SST_Logo.png?1706888781"
+        alt="Sst-logo" />
+      <img
+        src="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/064/032/original/scaler-social.png?1706888764"
+        alt="scaler-socail" />
+    </header>
+    <div class="main-container">
+      <div class="create-post">
+        <div>
+          <textarea
+            id="newpost"
+            cols="35"
+            rows="15"></textarea>
+          <div class="numb-post">
+            <span class="checkChar">0/100</span>
+            <button class="post">Post</button>
+          </div>
+        </div>
+      </div>
 
-})
+      <div class="feed">
+        <span>Your Feed</span>
+        <div>
+          <textarea
+            id="feedArea"
+            cols="30"
+            rows="10">
+          </textarea>
+        </div>
+      </div>
+    </div>
 
-postbtn.addEventListener('click', function (e) {
+    <div class="detele-post">
+      <div class="card">
+        <button
+          type="button"
+          class="dismiss">
+          ×
+        </button>
+        <div class="header">
+          <div class="content">
+            <span class="title">Confirmation</span>
+            <p class="message">
+              Are you sure you want to permanently delete this tweet?
+            </p>
+          </div>
+          <div class="actions">
+            <button
+              type="button"
+              class="delete">
+              Delete
+            </button>
+            <button
+              type="button"
+              class="cancel">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    const newpost = textArea.value;
-    // textArea.value ='';
-    console.log(newpost);
-    let ticketCont = document.createElement("textArea");
-    ticketCont.className = "ticket";
-    ticketCont.innerHTML = `
-                            <div class="ticket-area">${newpost}</div>
-                            `
-    console.log(ticketCont)
-    ticketCont.value = newpost;
-});
-
-
-
-
+    <script src="script.js"></script>
+  </body>
+</html>
