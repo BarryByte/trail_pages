@@ -1,85 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    
-</head>
-<body>
-    <header>
-        <img class="img1" src="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/064/033/original/SST_Logo.png?1706888781">
-        <img class="img2" src="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/064/032/original/scaler-social.png?1706888764">
-    </header>
-    <hr>
+let postbtn = document.querySelector('.post');
+let textArea = document.getElementById('newpost');
+let feedArea = document.getElementById('feedArea');
+let feed = document.querySelector('.feed');
+postbtn.addEventListener('click', function () {
+    console.log("postbtn has been clicked");
 
-    <main class="container">
-        <div class="left-container">
+})
 
-            <div class="left-main">
+postbtn.addEventListener('click', function (e) {
 
-                <div class="main-1">
-            <h3>Post your thoughts here</h3>
-            <div class="img-input">
-                <img class="p-img" src="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/064/031/original/profile_image.png?1706888739">
-                <!-- <input class="input-comment" type="text" placeholder="Type your thoughts here"> -->
-                <textarea placeholder="Type your thoughts" id='text-area' class="input-comment"></textarea>
-            </div>
-
-        </div>
-
-            <div class="post">
-                <p id="text_count">0/100</p>
-                <button id="post_button"  class="post-btn">Post</button>
-            </div>
-
-        </div>
-
-        </div>
-
-        <div class="right-container">
-            <h3>Your Feed</h3>
-            <div class="right-main" id="res">
-                
-                <div class="interact">
-
-                    <div class="components">
-                <img class="p-img" src="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/064/031/original/profile_image.png?1706888739">
+    const newpost = textArea.value;
+    // textArea.value ='';
+    console.log(newpost);
+    let ticketCont = document.createElement("textArea");
+    ticketCont.className = "ticket";
+    ticketCont.innerHTML = `
+                            <div class="ticket-area">${newpost}</div>
+                            `
+    console.log(ticketCont)
+    ticketCont.value = newpost;
+});
 
 
-                <div class="user">
-                    <div class="user-1">
-                    <p class="username"></p>
-                    <div class="edit">
-                        <img src="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/064/028/original/edit.png?1706888661">
-                        <img src="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/064/027/original/delete.png?1706888643">
-                    </div>
-                </div>
-
-                    <textarea class="right-input" placeholder="Type"></textarea>
-
-                    <div class="interact-icons">
-                        <img src="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/064/026/original/comment.png?1706888619">
-                        <img src="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/064/029/original/heart.png?1706888679">
-
-                    </div>
 
 
-                </div>
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </main>
-
-    
-</body>
-</html>
