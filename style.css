@@ -1,119 +1,129 @@
-body{
-    background-color:  #FFFFFF;
-    
-}
-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 40px;
-}
-hr {
-        padding: 0;
-        margin: 0;
-    }
-
-
-.img-input{
-    display: flex;
-    gap:10px;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.input-comment {
-    border-radius: 8px;
-    border: none;
-    background-color: transparent; 
-    resize: none;
-    width: 347px;
-    height: 54px;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: whitesmoke;
+  border-bottom: solid 1px;
 }
-.input-comment:focus {
-    outline: none; 
+.create-post {
+  background-color: rgb(243, 240, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+  width: 100%;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
-.post{
-    display: flex;
-    justify-content: space-between;
-    color: rgba(97, 115, 142, 1);
-
-
+.numb-post {
+  margin: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.img1{
-    width: 117px;
- height: 34px;
-}
-.img2{
-    width:234px;
-height: 29px;
-
-
-}
-.post-btn {
-    width: 112px;
-    height: 38px;
-    border-radius: 100px;
-    background: rgba(0, 65, 202, 1);
-    outline: none;
-    border: none;
-    cursor: pointer;
-    color: #FFFFFF;
+.post {
+  background-color: rgb(66, 66, 222);
+  border-radius: 30%;
+  font-size: large;
 }
 
-.container{
-    display: flex;
+.feed {
+  background-color: rgb(201, 166, 166);
+  flex: 1;
+  display: flex;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
-.left-container{
-       background: rgba(236, 248, 255, 0.4);
-        width: 768px;
-        height: 654px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-}
-.left-main{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 521px;
-    height: 248px;
-    padding: 24px;
-    border-radius: 8px;
-    border: 1px solid rgba(214, 222, 229, 1);
-    background-color: #FFFFFF;
+.main-container {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
 }
 
-.right-container{
-    background-color: #FFFFFF;
-
-padding: 24px;
-
-}
-.p-img{
-width:48px;
-height:48px ;
-
+.checkChar {
+  background-color: blueviolet;
 }
 
-
-.right-container{
-
-background: rgba(255, 255, 255, 1);
+.card {
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  border-radius: 0.5rem;
+  max-width: 290px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background-color: #fff;
 }
-.components{
-    
-display: flex;
-flex-direction: column;
-border: 1px solid rgba(214, 222, 229, 1);
-width: 464px;
-height: 194px;
-padding: 24px;
-border-radius: 8px;
 
+.dismiss {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: black;
+  border: 2px solid #d1d5db;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  transition: 0.3s ease;
 }
-.user-1{
-    display: flex;
-    justify-content: space-between;
+
+.dismiss:hover {
+  background-color: #ee0d0d;
+  border: 2px solid #ee0d0d;
+  color: #fff;
 }
-.user{
-    width: 416px;
-    height: 146px;
-    gap: 12px;
+
+.header {
+  padding: 1.25rem 1rem 1rem 1rem;
+}
+
+.image {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e2feee;
+
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  animation: animate 0.6s linear alternate-reverse infinite;
+  transition: 0.6s ease;
+}
+
+.content {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.title {
+  color: #066e29;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.message {
+  margin-top: 0.5rem;
+  color: #595b5f;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.actions {
+  margin: 0.75rem 1rem;
+  display: flex;
+  margin-left: 40%;
 }
